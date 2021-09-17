@@ -1,12 +1,12 @@
-import { StrictMode } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import ThemeApp from "./Theme";
 
-import App from "./App";
-
-const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootElement
+  <Provider store={store}>
+    <ThemeApp />
+  </Provider>,
+  document.querySelector("#root")
 );
